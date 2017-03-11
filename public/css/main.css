@@ -1,0 +1,655 @@
+/* import des polices */
+
+@font-face {
+	font-family: 'ralewaythin';
+	src: url('../fonts/raleway-thin-webfont.woff2') format('woff2'), url('../fonts/raleway-thin-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ralewaylight';
+	src: url('../fonts/raleway-light-webfont.woff2') format('woff2'), url('../fonts/raleway-light-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ralewayblack';
+	src: url('../fonts/raleway-black-webfont.woff2') format('woff2'), url('../fonts/raleway-black-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+/* start general style */
+
+:root {
+    font-size: 62.5%;
+}
+
+html, body, main, section {
+    width: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: ralewaylight;
+    font-size: 1rem;
+    line-height: 2.5rem;
+/*    background-color: rgb(206, 205, 194);*/
+}
+
+a, a:active, a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+	font-size: 4rem;
+
+	text-align:center;
+	color: grey;
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+}
+p{
+	font-size: 1.8rem;
+	color:white;
+}
+
+/* end general style */
+
+#bar {
+    position: fixed;
+    width: 0;
+    top: 0px;
+    left: 0px;
+    border-bottom: 2px solid rgba(57, 217, 157, 1) ;
+}
+
+/* start menu style */
+
+nav {
+    position: fixed;
+    top: 1vh;
+    right: 2%;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+	.sous-menu {
+	    position: absolute;
+	    top: 50px;
+	    right: 0px;
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	    background-color: rgba(57, 217, 157, 0.8);
+	    display: none;
+	}
+
+		.sous-menu li {
+		    padding: 1rem;
+		    transition: all 0.2s ease;
+		    font-family: ralewayblack;
+		}
+
+		.sous-menu li:hover {
+		    background-color: rgba(57, 217, 157, 0.8);
+		}
+
+			.sous-menu li a, .sous-menu li a:visited {
+			    color: white;
+					display: block;
+					width: 100%;
+			}
+
+/* end menu style */
+
+/* start header style */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url('../images/enfants.jpg');
+    background-size:cover;
+    background-position: center center;
+    
+    background-attachment: fixed;}
+
+
+ 
+
+	#tagline h1 {
+	    font-size: 3rem;
+	    color: white;
+	   line-height: 3rem;
+	    text-align: center;
+	}
+
+	#tagline img {
+		display: block;
+		margin: 0 auto;
+	}
+
+#logo {
+    padding-top: 1vh;
+    padding-left: 2%;
+    width: 40%;
+}
+
+	#logo a img {
+	    max-width: 100%;
+	}
+
+#btn-scroll {
+    display: none;
+}
+
+/* end header style */
+
+/* start main style */
+
+section {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+section:last-child {
+    flex-direction: column;
+}
+
+	.section-header {
+	    /*height: 250px;*/
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	}
+
+	.section-content {
+	    padding: 0 2rem;
+	    background-color: rgb(96,66,92);
+	    
+	}
+
+		.section-content p {
+		    text-align: center;
+		    color: white;
+		    font-size: 1.5rem;
+		}
+
+		.section-content img {
+		    max-width: 40%;
+				display: block;
+				margin: 0 auto;
+		}
+
+		.section-content a, .socials a {
+		    font-family: ralewayblack;
+		    font-size: 2rem;
+		    text-align: center;
+		    color: rgba(57, 217, 157, 1);
+				display: block;
+				margin: 0 auto;
+		}
+
+		.section-content h2 {
+			font-family: ralewaylight;
+			font-size: 2.5rem;
+			font-weight: bolder;
+			text-align: center;
+		}
+
+
+}
+
+#public .section-content {
+	background-color: rgb(40, 175, 176);
+}
+
+#ateliers .section-header {
+    background-image: url('../images/ateliers.jpeg');
+}
+
+#ateliers .section-content {
+	padding-bottom: 2rem;
+	background-color: rgb(144, 23, 52);
+	
+
+}
+
+
+#meetup .section-header {
+    background-image: url('../images/cafeparents.jpeg');
+}
+
+#pro .section-header {
+	/*height: auto;*/
+	background-image: url('../images/enfantbulle.jpeg');
+}
+#meetup .section-content {
+			background-color: rgb(160, 25, 68);
+		}
+
+#pro .section-content {
+			background-color: rgb(175, 27, 63);
+		}
+
+/* end main style */
+
+/* start formContact style */
+
+	#contact {
+		background-color: rgb(67, 67, 113);
+	}
+
+	#formContact {
+	    width: 100%;
+			padding-top: 1rem;
+	}
+
+		#formContact div {
+		    width: 90%;
+		    margin: 0 auto;
+		}
+
+		#formContact input, #formContact textarea, #formContact button {
+		    display: block;
+		    margin: 1rem auto;
+		    padding: 0.5rem;
+		    width: 90%;
+		    background-color: rgba(255, 255, 255, 0.8);
+		    border-style: none;
+		    color: white;
+		    border-radius: 0.4rem;
+		    transition: all 0.3s ease;
+			 font-size: 1.5rem;
+		}
+
+			#formContact input:focus, #formContact textarea:focus {
+			    background-color: rgba(255, 102, 0, 1);
+			}
+
+		#formContact button {
+		    margin-top: 2rem;
+		    background-color: rgba(57, 217, 157, 1);
+		    transition: all 0.3s ease;
+		}
+
+		#formContact label {
+		    display: block;
+				text-align: center;
+				color: white;
+				font-size: 1.5rem;
+		}
+
+
+/* end formContact style */
+
+footer {
+    position: relative;
+    text-align: center;
+    background-color: rgb(47, 72, 88);
+    height: 20%;
+    color: white;
+		padding-bottom: 2rem;
+}
+
+	footer a, footer a:visited {
+	    color: white;
+	}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 72, 88);
+    padding-top: 3rem;
+}
+
+	.socials div {
+	    padding: 0 1rem;
+	}
+
+.ml {
+    display: block;
+    height: 80vh;
+    font-family: ralewaylight;
+    /*background-image: url('public/images/enfants.jpg');*/
+    background-size: cover;
+    background-position-x: -130px;
+    }
+
+	.ml div {
+	    margin: 0 auto;
+	    width: 80%;
+	    font-size: 1rem;
+	}
+
+		.ml div a {
+		    font-size: 1rem;
+				font-family: ralewayblack;
+		    color: rgba(57, 217, 157, 1);
+		}
+
+	.ml h4 {
+		margin-top: 0;
+		padding-top: 2rem;
+	}
+	.ml p {
+	color: black;}
+/* Agenda */
+.wrap
+{
+	text-align:center;
+	width:100%;
+	height:90%;
+	margin-bottom:100px;
+	margin-top:5%;
+}
+.box
+{
+	position:relative;
+	display:inline-block;
+	width:300px;
+	height:300px;
+	vertical-align:top;
+	background-color:rgba(57, 217, 157,0.8);
+	margin-right:1%;
+	margin-top:1%;
+	padding:5px; 
+}
+.box:hover{
+	background-color:rgba(144, 23, 52,0.8);
+}
+.box h2{
+	
+	font-size: 3rem;
+	
+	text-align:center;
+	color: grey;
+
+}
+.box p{
+	font-size: 2rem;
+	
+}
+
+/* start @media queries */
+
+@media only screen and (max-width: 320px ) {
+
+	footer img {
+		width: 2rem;
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+	footer {
+		font-size: 1.5rem;
+	}
+
+	.ml p, .ml h4 {
+		font-size: 1.5rem;
+	}
+
+		.ml p a {
+			font-size: 1.5em;
+		}
+	.section-content {
+	    padding: 0 3rem;
+	 }
+}
+
+@media only screen and (min-width: 992px) {
+
+    @-moz-keyframes bounce {
+        0% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+
+    header {
+        height: 60vh
+    }
+
+    .sous-menu li {
+        font-size: 2rem;
+    }
+
+		#tagline {
+        margin-top: 0;
+    }
+
+	    #tagline h1 {
+	        font-size: 3em;
+	        line-height: 2em;
+	    }
+
+		    #tagline h1 img {
+		        vertical-align: middle;
+		    }
+
+    #logo {
+        padding-top: 1%;
+        padding-left: 1%;
+        width: 20%;
+    }
+
+    #btn-scroll {
+        width: 30%;
+        margin: 10vh auto 0;
+        background-color: rgba(255, 102, 0, 1);
+        border-style: none;
+        border-radius: 4px;
+        padding: 1rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        display: block;
+				color: white;
+				font-size: 2rem;
+				font-family: ralewayblack;
+    }
+
+	    #btn-scroll:hover, #formContact button:hover {
+	        background-color: rgba(255, 102, 0, 0.8);
+	        cursor: pointer;
+	    }
+
+			.bounce:hover {
+			        -moz-animation: bounce 0.3s ease infinite alternate;
+			    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    section:last-child {
+        flex-direction: row;
+    }
+
+	    section div a {
+	        font-size: 2rem;
+	    }
+
+		    section div a img {
+		        font-size: 60rem;
+		    }
+
+	    .section-header {
+	        width: 47%;
+	       /* height: 100%;*/
+	        /*background-size: cover;*/
+	        
+	    }
+
+	    .section-content {
+	    		min-height: 450px;
+	    		
+	        display: flex;
+	        flex-direction: column;
+	        justify-content: center;
+	        width: 53%;
+	        color: white;
+	        text-align: center;
+	        padding: 0 4rem;
+	    }
+
+				.section-content a {
+					font-size: 3rem;
+				}
+
+ #pro #ateliers, #meetup {
+        height:100%; 
+    }
+
+		#ateliers, #pro {
+        flex-direction: row-reverse;
+    }
+
+		#public .section-header {
+			display: none;
+		}
+
+		#public .section-content{
+			width: 100%;
+			background-color: rgb(96, 66, 92);
+			text-align: center;
+			padding: 0rem 30rem;
+			line-height: 3rem;
+			box-sizing: border-box;
+		}
+
+			#public .section-content p {
+				text-align: center;
+				font-size: 2rem;
+			}
+
+			#public .section-content h2 {
+								
+				font-size: 3rem;
+			}
+		#ateliers .section-content p, #meetup .section-content p, #pro .section-content p{
+			font-size: 1.8rem;
+			line-height: 3rem;
+		
+		}
+		#ateliers .section-content {
+			background-color: rgb(144, 23, 52);
+		}
+
+			#ateliers .section-content img {
+				padding-top: 3rem;
+				width: 20rem;
+			}
+
+		#meetup .section-content {
+			background-color: rgb(160, 25, 68);
+		}
+
+			#meetup .section-content img {
+				padding-top: 3rem;
+			}
+
+		#pro .section-content {
+			background-color: rgb(175, 27, 63);
+		}
+			
+
+		#contact div {
+			width: 80%;
+		}
+
+		#formContact {
+			padding: 3rem 0;
+		}
+
+			#formContact input, #formContact textArea, #formContact button, #formContact label, .section-content, footer {
+				font-size: 2rem;
+			}
+
+			.socials {
+	        height: 10vh;
+	    }
+
+		    .socials div {
+		        display: flex;
+		        flex-direction: column;
+		        justify-content: center;
+		        height: 100%;
+		    }
+
+			    .socials div a {
+			        height: auto;
+			    }
+
+		.ml {
+				margin-top: 0;
+				height: 80vh;
+        display: block;
+        font-family: ralewaylight;
+        background-image: url('../images/enfants.jpg');
+        background-size: cover;
+        background-position: center center;
+        /*background-position-y: -280px;*/
+    }
+	.wrap{
+		 background-image: url('../images/enfants.jpg');
+        background-size: cover;
+        background-position: center center;
+	
+	}
+	    .ml div {
+	        margin: 0 auto;
+					width: 80%;
+	        font-size: 1.5rem;
+	    }
+
+		    .ml div a {
+					font-family: ralewayblack;
+					font-size: 2rem;
+		  		color: rgba(57, 217, 157, 1);
+		    }
+
+				.ml div h4 {
+					margin-top: 0;
+					padding-top: 2rem;
+				}
+
+				.login form, .feedback {
+					width: 40%;
+					margin: 0 auto;
+					text-align: center;
+					font-size: 2rem;
+				}
+
+				.login form input {
+					display: block;
+					margin: 0 auto;
+					width: 100%;
+					text-align: center;
+					padding: 0.5rem;
+					margin-bottom: 1rem;
+					box-sizing: border-box;
+				}
+
+				.login form input:first-child {
+					margin-top: 1rem;
+				}
+}
+
+/* end @media queries */
